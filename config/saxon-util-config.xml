@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://saxon.sf.net/ns/configuration" edition="EE">
+<!--	<global 
+		allowExternalFunctions	= "true" 
+		versionOfXml			= "1.0"
+		schemaValidation		= "lax"/>-->
+	<!--<xslt
+		schemaAware				= "true">-->
+		<xslt>
+		<extensionElement 
+			namespace			= "http://saxon.sf.net/sql"
+			factory				= "net.sf.saxon.option.sql.SQLElementFactory"/>
+		<extensionElement 
+			namespace			= "http://www.gdv-dl.de/tfs"
+			factory				= "com.gdvdl.OxygenTfs.TfsElementFactory"/>
+		<extensionElement 
+			namespace			= "http://www.dita-semia.org/xslt-util"
+			factory				= "com.DitaSemia.XsltUtil.SaxonFactory"/>
+		<extensionElement 
+			namespace			= "http://www.dita-semia.org/xslt-gui"
+			factory				= "org.DitaSemia.XsltGui.SaxonFactory"/>
+	</xslt>
+	<xsd version="1.1"/>
+</configuration>
